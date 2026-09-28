@@ -68,7 +68,7 @@ export function SocialPresence() {
     <section className="relative bg-cream">
       <div className="mx-auto max-w-[1400px] px-5 pt-12 lg:px-10 lg:pt-14">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto]">
-          <div className="relative xl:pr-56">
+          <div className="relative">
             <div className="flex items-center gap-3">
               <span className="eyebrow text-[0.95rem] text-gold brightness-75">Our Social Presence</span>
               <span className="h-px w-12 bg-gold" />
@@ -78,10 +78,10 @@ export function SocialPresence() {
               <br />
               <span className="text-gold">More on Social Media.</span>
             </h2>
-            <p className="mt-4 max-w-xl text-[1rem] text-ink/75 lg:text-[1.1rem]">
+            <p className="mt-4 max-w-[560px] text-[1rem] text-ink/75 lg:text-[1.1rem]">
               Follow our journey, watch project breakdowns, tech content, and get a behind-the-scenes look at Anni Web Solutions.
             </p>
-            <span className="hand absolute left-[565px] top-0 hidden -rotate-12 text-[1.7rem] leading-tight text-ink/85 xl:block">
+            <span className="hand absolute left-[560px] top-0 hidden -rotate-12 text-[1.7rem] leading-tight text-ink/85 xl:block">
               Let's
               <br />
               <span className="ml-3">Learn</span>
