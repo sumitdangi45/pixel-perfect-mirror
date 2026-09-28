@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DesignCompareRouteImport } from './routes/design-compare'
+import { Route as ApiCompareRouteImport } from './routes/api/compare'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DesignCompareRoute = DesignCompareRouteImport.update({
+  id: '/design-compare',
+  path: '/design-compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCompareRoute = ApiCompareRouteImport.update({
+  id: '/api/compare',
+  path: '/api/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/design-compare': typeof DesignCompareRoute
+  '/api/compare': typeof ApiCompareRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/design-compare': typeof DesignCompareRoute
+  '/api/compare': typeof ApiCompareRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/design-compare': typeof DesignCompareRoute
+  '/api/compare': typeof ApiCompareRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/design-compare' | '/api/compare'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/design-compare' | '/api/compare'
+  id: '__root__' | '/' | '/design-compare' | '/api/compare'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DesignCompareRoute: typeof DesignCompareRoute
+  ApiCompareRoute: typeof ApiCompareRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/design-compare': {
+      id: '/design-compare'
+      path: '/design-compare'
+      fullPath: '/design-compare'
+      preLoaderRoute: typeof DesignCompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/compare': {
+      id: '/api/compare'
+      path: '/api/compare'
+      fullPath: '/api/compare'
+      preLoaderRoute: typeof ApiCompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DesignCompareRoute: DesignCompareRoute,
+  ApiCompareRoute: ApiCompareRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
