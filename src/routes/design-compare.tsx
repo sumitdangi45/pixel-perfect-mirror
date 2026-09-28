@@ -23,7 +23,7 @@ const toDataUrl = (f: File) =>
     r.readAsDataURL(f);
   });
 
-function Drop({ label, value, onChange }: { label: string; value?: string; onChange: (v: string) => void }) {
+function Drop({ label, value, onChange }: { label: string; value: string | undefined; onChange: (v: string) => void }) {
   return (
     <label className="flex min-h-[220px] cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-border bg-white p-4 text-center">
       {value ? (
