@@ -97,7 +97,7 @@ function Index() {
     <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="bg-white">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-10">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:grid-cols-[auto_1fr_auto] lg:gap-10 lg:px-10">
           <Logo />
           <nav className="hidden items-center gap-8 lg:flex">
             {navLinks.map((l) => (
@@ -160,9 +160,15 @@ function Index() {
           height={912}
           className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[58%] object-cover lg:block"
         />
-        <div className="pointer-events-none absolute inset-0 hidden bg-[linear-gradient(90deg,var(--forest)_0%,var(--forest)_40%,color-mix(in_oklab,var(--forest)_85%,transparent)_50%,transparent_72%)] lg:block" />
+        <div
+          className="pointer-events-none absolute inset-0 hidden lg:block"
+          style={{
+            background:
+              "linear-gradient(90deg, var(--forest) 0%, var(--forest) 38%, rgba(20,38,31,0.75) 52%, rgba(20,38,31,0.25) 66%, rgba(20,38,31,0) 80%)",
+          }}
+        />
 
-        <div className="absolute right-[30%] top-[14%] hidden hand -rotate-6 text-[1.7rem] leading-tight text-white/95 xl:block">
+        <div className="hand absolute right-[36%] top-[11%] hidden -rotate-6 text-[1.6rem] leading-[1.15] text-white/95 xl:block">
           Ideas
           <br />
           Build
@@ -172,7 +178,7 @@ function Index() {
           Businesses
           <span className="mt-1 block h-px w-24 bg-white/60" />
         </div>
-        <div className="absolute left-[64%] top-[40%] hidden -translate-y-1/2 text-center font-display text-[1.1rem] font-bold italic leading-snug text-white lg:block">
+        <div className="absolute left-[71%] top-[36%] hidden -translate-y-1/2 text-center font-display text-[1.05rem] font-bold italic leading-snug text-white lg:block">
           Your
           <br />
           Vision
@@ -181,8 +187,9 @@ function Index() {
           <span className="mx-auto mt-2 block h-0.5 w-8 bg-white/80" />
         </div>
 
+
         <div className="relative mx-auto max-w-[1400px] px-5 pb-0 pt-10 lg:px-10 lg:pt-14">
-          <div className="max-w-xl">
+          <div className="max-w-xl lg:max-w-[38rem]">
             <div className="flex items-center gap-3">
               <span className="eyebrow text-white/85">Let&apos;s Build Together</span>
               <span className="h-px w-8 bg-gold" />
@@ -281,7 +288,7 @@ function Index() {
 
           {/* Newsletter */}
           <div className="relative mt-10 rounded-lg bg-sand px-6 py-7 lg:px-10">
-            <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_auto]">
+            <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_auto] xl:pr-40">
               <div className="flex items-start gap-5">
                 <PlaneIcon className="hidden h-12 w-12 shrink-0 text-gold sm:block" />
                 <div className="min-w-0">
