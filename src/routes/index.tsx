@@ -264,17 +264,17 @@ function Index() {
             <span className="mt-1 block h-px w-24 bg-ink/40" />
           </span>
 
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid grid-cols-4 gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
             {socials.map(({ name, copy, Icon, box }) => (
               <a
                 key={name}
                 href="#"
-                className="flex items-start gap-4 rounded-lg border border-border bg-white p-5 transition-shadow hover:shadow-md"
+                className="flex items-center justify-center gap-4 rounded-lg border border-border bg-white p-3 transition-shadow hover:shadow-md sm:items-start sm:justify-start sm:p-5"
               >
                 <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-md ${box}`}>
                   <Icon className="h-6 w-6" />
                 </span>
-                <span className="min-w-0">
+                <span className="hidden min-w-0 sm:block">
                   <span className="block font-display text-[0.95rem] font-bold text-ink">
                     {name}
                   </span>
@@ -282,6 +282,7 @@ function Index() {
                     {copy}
                   </span>
                 </span>
+
               </a>
             ))}
           </div>
@@ -290,7 +291,7 @@ function Index() {
           <div className="relative mt-10 rounded-lg bg-sand px-6 py-7 lg:px-10">
             <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_auto] xl:pr-40">
               <div className="flex items-start gap-5">
-                <PlaneIcon className="hidden h-12 w-12 shrink-0 text-gold sm:block" />
+                <PlaneIcon className="h-9 w-9 shrink-0 text-gold sm:h-12 sm:w-12" />
                 <div className="min-w-0">
                   <h3 className="text-[1.3rem] lg:text-[1.5rem]">
                     Subscribe to Our <span className="text-gold">Newsletter</span>
