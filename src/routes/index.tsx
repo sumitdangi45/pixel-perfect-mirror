@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import heroDesk from "@/assets/hero-desk.jpg";
 import { Logo } from "@/components/site/Logo";
+import { SocialPresence } from "@/components/site/SocialPresence";
 import {
   ArrowRight,
   CalendarIcon,
@@ -238,6 +239,8 @@ function Index() {
           <div className="h-8 lg:h-10" />
         </div>
       </section>
+
+      <SocialPresence />
 
       {/* Follow our journey */}
       <section className="relative bg-cream">
