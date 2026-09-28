@@ -73,7 +73,7 @@ export function SocialPresence() {
               <span className="eyebrow text-[0.95rem] text-gold brightness-75">Our Social Presence</span>
               <span className="h-px w-12 bg-gold" />
             </div>
-            <h2 className="mt-4 text-[2rem] leading-[1.1] sm:text-[2.6rem] lg:text-[3.1rem]">
+            <h2 className="mt-4 text-[2rem] leading-[1.1] sm:text-[2.6rem] lg:text-[3rem] xl:whitespace-nowrap">
               Ideas, Projects &amp;
               <br />
               <span className="text-gold">More on Social Media.</span>
