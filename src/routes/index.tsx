@@ -99,7 +99,7 @@ function Index() {
       <header className="bg-white">
         <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:grid-cols-[auto_1fr_auto] lg:gap-10 lg:px-10">
           <Logo />
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center justify-center gap-8 lg:flex">
             {navLinks.map((l) => (
               <a
                 key={l}
@@ -189,7 +189,7 @@ function Index() {
 
 
         <div className="relative mx-auto max-w-[1400px] px-5 pb-0 pt-10 lg:px-10 lg:pt-14">
-          <div className="max-w-xl lg:max-w-[40rem]">
+          <div className="max-w-xl lg:max-w-[46rem]">
             <div className="flex items-center gap-3">
               <span className="eyebrow text-white/85">Let&apos;s Build Together</span>
               <span className="h-px w-8 bg-gold" />
