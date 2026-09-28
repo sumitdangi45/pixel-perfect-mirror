@@ -70,18 +70,18 @@ export function SocialPresence() {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto]">
           <div className="relative">
             <div className="flex items-center gap-3">
-              <span className="eyebrow text-gold">Our Social Presence</span>
+              <span className="eyebrow text-[0.95rem] text-gold brightness-75">Our Social Presence</span>
               <span className="h-px w-12 bg-gold" />
             </div>
-            <h2 className="mt-4 text-[2rem] leading-[1.1] sm:text-[2.6rem] lg:text-[3.1rem]">
+            <h2 className="mt-4 text-[2rem] leading-[1.1] sm:text-[2.6rem] lg:text-[3rem] xl:whitespace-nowrap">
               Ideas, Projects &amp;
               <br />
               <span className="text-gold">More on Social Media.</span>
             </h2>
-            <p className="mt-4 max-w-xl text-[1rem] text-ink/75 lg:text-[1.1rem]">
+            <p className="mt-4 max-w-[560px] text-[1rem] text-ink/75 lg:text-[1.1rem]">
               Follow our journey, watch project breakdowns, tech content, and get a behind-the-scenes look at Anni Web Solutions.
             </p>
-            <span className="hand absolute right-0 top-0 hidden -rotate-12 text-[1.6rem] leading-tight text-ink/85 xl:block">
+            <span className="hand absolute left-[560px] top-0 hidden -rotate-12 text-[1.7rem] leading-tight text-ink/85 xl:block">
               Let's
               <br />
               <span className="ml-3">Learn</span>
@@ -95,9 +95,9 @@ export function SocialPresence() {
           <div className="relative flex flex-col items-start gap-5 lg:items-end xl:pr-36">
             <div className="grid w-full grid-cols-4 gap-2 sm:gap-3 lg:w-auto">
               {stats.map(({ I, v, l }) => (
-                <div key={l} className="flex flex-col items-center rounded-xl bg-sand/70 px-2 py-4 text-center sm:px-5 lg:w-[108px]">
+                <div key={l} className="flex flex-col items-center rounded-xl bg-sand/70 px-2 py-4 text-center sm:px-5 lg:h-[122px] lg:w-[108px]">
                   <I />
-                  <span className="mt-3 font-display text-[1.2rem] font-bold text-ink sm:text-[1.5rem]">{v}</span>
+                  <span className="mt-2.5 font-display text-[1.2rem] font-bold text-ink sm:text-[1.5rem]">{v}</span>
                   <span className="text-[0.7rem] text-ink/65 sm:text-[0.8rem]">{l}</span>
                 </div>
               ))}
@@ -115,22 +115,22 @@ export function SocialPresence() {
       </div>
 
       {/* Carousel */}
-      <div className="relative mx-auto mt-8 max-w-[1500px] px-0 lg:px-4">
+      <div className="relative mx-auto mt-6 max-w-[1500px] px-0 lg:px-4">
         <button onClick={() => scroll(-1)} aria-label="Previous" className="absolute left-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-border bg-white shadow md:grid">
           <ArrowRight className="h-5 w-5 rotate-180" />
         </button>
         <button onClick={() => scroll(1)} aria-label="Next" className="absolute right-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-border bg-white shadow md:grid">
           <ArrowRight className="h-5 w-5" />
         </button>
-        <div ref={track} className="flex snap-x items-center gap-4 overflow-x-auto px-5 py-4 [scrollbar-width:none] md:px-16 lg:justify-center">
+        <div ref={track} className="flex snap-x items-center gap-[18px] overflow-x-auto px-5 py-4 [scrollbar-width:none] md:px-16 lg:justify-center">
           {cards.map(({ img, P, p, t, v, featured, pos }, i) => (
             <a
               key={i}
               href="#"
               className={`relative shrink-0 snap-center overflow-hidden rounded-xl text-white ${
                 featured
-                  ? "h-[440px] w-[300px] shadow-[0_0_0_6px_#fff,0_0_0_8px_#f3d9bd,0_20px_40px_-10px_rgba(0,0,0,0.35)] lg:w-[350px]"
-                  : "h-[400px] w-[230px] lg:w-[245px]"
+                  ? "h-[480px] w-[300px] shadow-[0_0_0_6px_#fff,0_0_0_8px_#f3d9bd,0_20px_40px_-10px_rgba(0,0,0,0.35)] lg:w-[350px]"
+                  : "h-[425px] w-[230px] lg:w-[245px]"
               }`}
             >
               <img src={img} alt={t.join(" ")} loading="lazy" className={`absolute inset-0 h-full w-full object-cover ${pos ?? ""}`} />
@@ -161,7 +161,7 @@ export function SocialPresence() {
                 <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6" fill="currentColor"><path d="M7 4v16l13-8L7 4Z" /></svg>
               </span>
               <div className="absolute inset-x-4 bottom-4">
-                <p className="font-display text-[1.15rem] font-semibold leading-tight">
+                <p className="font-display text-[1.1rem] font-medium leading-tight">
                   {t.map((x) => (<span key={x} className="block">{x}</span>))}
                 </p>
                 <p className="mt-2 flex items-center gap-2 text-[0.85rem] text-white/90"><Eye /> {v} views</p>
@@ -172,11 +172,11 @@ export function SocialPresence() {
       </div>
 
       {/* Stay updated */}
-      <div className="mx-auto max-w-[1400px] px-5 pb-12 pt-6 lg:px-10">
-        <div className="relative rounded-2xl bg-sand/70 px-6 py-7 lg:px-10">
+      <div className="mx-auto max-w-[1400px] px-5 pb-12 pt-5 lg:px-10">
+        <div className="relative rounded-2xl bg-sand/70 px-6 py-6 lg:px-10">
           <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_auto_auto] xl:pr-32">
             <div className="flex items-center gap-5">
-              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-gold text-white sm:h-16 sm:w-16">
+              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-gold text-white sm:h-[66px] sm:w-[66px]">
                 <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor"><path d="M12 3 3 9v11h18V9l-9-6Zm0 2.4L18.6 9 12 13 5.4 9 12 5.4Z" /></svg>
               </span>
               <div>
