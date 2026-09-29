@@ -81,14 +81,14 @@ export function SocialPresence() {
             <p className="mt-4 max-w-[560px] text-[1rem] text-ink/75 lg:text-[1.1rem]">
               Follow our journey, watch project breakdowns, tech content, and get a behind-the-scenes look at Anni Web Solutions.
             </p>
-            <span className="hand absolute left-[570px] -top-2 hidden -rotate-12 text-[1.7rem] leading-tight text-ink/85 xl:block">
+            <span className="hand absolute left-[590px] top-0 text-[1.5rem] hidden -rotate-12 leading-tight text-ink/85 xl:block">
               Let's
               <br />
               <span className="ml-3">Learn</span>
               <br />
               <span className="ml-6">Build</span>
               <br />
-              <span className="ml-8 whitespace-nowrap">Grow Together</span>
+              <span className="ml-8">Grow Together</span>
             </span>
           </div>
 
@@ -115,14 +115,14 @@ export function SocialPresence() {
       </div>
 
       {/* Carousel */}
-      <div className="relative mx-auto mt-1 max-w-[1536px] px-0 lg:px-[60px]">
+      <div className="relative mx-auto mt-1 max-w-[1536px] px-0 lg:px-6">
         <button onClick={() => scroll(-1)} aria-label="Previous" className="absolute left-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-border bg-white shadow md:grid">
           <ArrowRight className="h-5 w-5 rotate-180" />
         </button>
         <button onClick={() => scroll(1)} aria-label="Next" className="absolute right-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-border bg-white shadow md:grid">
           <ArrowRight className="h-5 w-5" />
         </button>
-        <div ref={track} className="flex snap-x items-center gap-[16px] overflow-x-auto px-5 py-4 [scrollbar-width:none] md:px-16 lg:justify-center">
+        <div ref={track} className="flex snap-x items-center gap-[14px] overflow-x-auto px-5 py-4 [scrollbar-width:none] md:px-16 lg:px-14 lg:justify-center">
           {cards.map(({ img, P, p, t, v, featured, pos }, i) => (
             <a
               key={i}
