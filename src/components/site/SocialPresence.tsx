@@ -66,14 +66,14 @@ export function SocialPresence() {
 
   return (
     <section className="relative bg-cream">
-      <div className="mx-auto max-w-[1400px] px-5 pt-12 lg:px-10 lg:pt-14">
+      <div className="mx-auto max-w-[1400px] px-5 pt-10 lg:px-[72px] lg:pt-12">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto]">
           <div className="relative">
             <div className="flex items-center gap-3">
               <span className="eyebrow text-[0.95rem] text-gold brightness-75">Our Social Presence</span>
               <span className="h-px w-12 bg-gold" />
             </div>
-            <h2 className="mt-4 text-[2rem] leading-[1.1] sm:text-[2.6rem] lg:text-[3rem] xl:whitespace-nowrap">
+            <h2 className="mt-4 font-bold text-[2rem] leading-[1.1] sm:text-[2.6rem] lg:text-[3.15rem] lg:leading-[1.08] xl:whitespace-nowrap">
               Ideas, Projects &amp;
               <br />
               <span className="text-gold">More on Social Media.</span>
@@ -81,18 +81,18 @@ export function SocialPresence() {
             <p className="mt-4 max-w-[560px] text-[1rem] text-ink/75 lg:text-[1.1rem]">
               Follow our journey, watch project breakdowns, tech content, and get a behind-the-scenes look at Anni Web Solutions.
             </p>
-            <span className="hand absolute left-[560px] top-0 hidden -rotate-12 text-[1.7rem] leading-tight text-ink/85 xl:block">
+            <span className="hand absolute left-[570px] -top-2 hidden -rotate-12 text-[1.7rem] leading-tight text-ink/85 xl:block">
               Let's
               <br />
               <span className="ml-3">Learn</span>
               <br />
               <span className="ml-6">Build</span>
               <br />
-              <span className="ml-8">Grow Together</span>
+              <span className="ml-8 whitespace-nowrap">Grow Together</span>
             </span>
           </div>
 
-          <div className="relative flex flex-col items-start gap-5 lg:items-end xl:pr-36">
+          <div className="relative flex flex-col items-start gap-3 lg:items-end lg:pt-5 xl:pr-36">
             <div className="grid w-full grid-cols-4 gap-2 sm:gap-3 lg:w-auto">
               {stats.map(({ I, v, l }) => (
                 <div key={l} className="flex flex-col items-center rounded-xl bg-sand/70 px-2 py-4 text-center sm:px-5 lg:h-[122px] lg:w-[108px]">
@@ -115,14 +115,14 @@ export function SocialPresence() {
       </div>
 
       {/* Carousel */}
-      <div className="relative mx-auto mt-6 max-w-[1500px] px-0 lg:px-4">
+      <div className="relative mx-auto mt-1 max-w-[1536px] px-0 lg:px-[60px]">
         <button onClick={() => scroll(-1)} aria-label="Previous" className="absolute left-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-border bg-white shadow md:grid">
           <ArrowRight className="h-5 w-5 rotate-180" />
         </button>
         <button onClick={() => scroll(1)} aria-label="Next" className="absolute right-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-border bg-white shadow md:grid">
           <ArrowRight className="h-5 w-5" />
         </button>
-        <div ref={track} className="flex snap-x items-center gap-[18px] overflow-x-auto px-5 py-4 [scrollbar-width:none] md:px-16 lg:justify-center">
+        <div ref={track} className="flex snap-x items-center gap-[16px] overflow-x-auto px-5 py-4 [scrollbar-width:none] md:px-16 lg:justify-center">
           {cards.map(({ img, P, p, t, v, featured, pos }, i) => (
             <a
               key={i}
@@ -172,15 +172,15 @@ export function SocialPresence() {
       </div>
 
       {/* Stay updated */}
-      <div className="mx-auto max-w-[1400px] px-5 pb-12 pt-5 lg:px-10">
-        <div className="relative rounded-2xl bg-sand/70 px-6 py-6 lg:px-10">
-          <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_auto_auto] xl:pr-32">
+      <div className="mx-auto max-w-[1536px] px-5 pb-10 pt-4 lg:px-10">
+        <div className="relative rounded-2xl bg-sand/70 px-6 py-6 lg:px-10 lg:py-7">
+          <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_auto_auto] xl:pr-40">
             <div className="flex items-center gap-5">
               <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-gold text-white sm:h-[66px] sm:w-[66px]">
                 <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor"><path d="M12 3 3 9v11h18V9l-9-6Zm0 2.4L18.6 9 12 13 5.4 9 12 5.4Z" /></svg>
               </span>
               <div>
-                <h3 className="text-[1.3rem] lg:text-[1.5rem]">Stay Updated</h3>
+                <h3 className="font-bold text-[1.3rem] lg:text-[1.5rem]">Stay Updated</h3>
                 <p className="mt-1 text-[0.9rem] text-ink/70">Get the latest project updates, tech content and behind-the-scenes insights.</p>
               </div>
             </div>
